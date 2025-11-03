@@ -1,0 +1,82 @@
+/* =======================================================
+   3. ESTILOS DE LOGIN (style-login.css)
+   Objetivo: Estilizar especificamente a página/componente
+   de formulário de login.
+   ======================================================= */
+
+/* 3.1. Container Principal da Tela de Login */
+.login-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    min-height: 100vh;
+    padding: var(--spacing-md);
+    background-color: var(--background-color); /* Herdado do global, mas pode ser sobrescrito */
+}
+
+/* 3.2. Cartão do Formulário de Login */
+.login-card {
+    background-color: var(--text-color-light);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Limita a largura do cartão */
+}
+
+/* 3.3. Título do Formulário */
+.login-card h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-color);
+}
+
+/* 3.4. Grupos de Formulário (Label + Input) */
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+/* 3.5. Labels */
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+    color: var(--text-color-dark);
+}
+
+/* 3.6. Campos de Input (Texto, Senha) */
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* 3.7. Botão de Envio Específico do Login */
+.login-button {
+    width: 100%;
+    margin-top: var(--spacing-md);
+    /* Herda o estilo base de .btn e .btn-primary do style-global.css */
+}
+
+/* 3.8. Link de Ajuda/Esqueci a Senha */
+.login-help-link {
+    display: block;
+    text-align: center;
+    margin-top: var(--spacing-md);
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.login-help-link:hover {
+    color: var(--primary-color);
+}
